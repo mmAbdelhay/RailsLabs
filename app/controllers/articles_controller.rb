@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: %i[new create edit update destroy]
 
   def new
     @name = params['name']
