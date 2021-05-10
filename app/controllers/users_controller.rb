@@ -8,7 +8,7 @@ class UsersController < ApplicationControllerApiController
       token = encode_token({ user_id: @user.id })
       render json: { user: @user, token: token }
     else
-      render json: { error: "Invalid username or password" }
+      render json: { error: 'Invalid username or password' }
     end
   end
 
@@ -20,10 +20,9 @@ class UsersController < ApplicationControllerApiController
       token = encode_token({ user_id: @user.id })
       render json: { user: @user, token: token }
     else
-      render json: { error: "Invalid username or password" }
+      render json: { error: 'Invalid username or password' }
     end
   end
-
 
   def auto_login
     render json: @user
